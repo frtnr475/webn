@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studi Kasus - Pertemuan 4</title>
+    <style>
+        body { font-family:  sans-serif; padding: 20px;}
+        h1 { color: #333;}
+        p { font-size:  1.1.;}
+        code { background: local #f4f4f4; padding: 2x 5px; border-radius: 4px;}
+    </style>
+</head>
+<body>
+
+    <h1>Studi Kasus 4: Program Penilaian Kelas</h1>
+    <p>
+        Silahkan buka <b>Console</b> (Tekan <code>F12</code>Untuk melihat hasil
+        eksekusi program JavaScript)
+    </p>
+
+    <script>
+        console.log("--- Memulai Program Penilain Kelas ---");
+
+        const studentScores = [85, 42, 95, 70, 55, 68, 92, 49];
+
+        for ( let i = 0; i < studentScores.length; i++) {
+
+            let currentScore = studentScores [i];
+
+            let grade = "";
+            let status = "";
+
+            if (currentScore > 80) {
+                grade = "A";
+                status = "Lulus";
+            } else if (currentScore > 70){
+                grade = "B";
+                status = "Lulus";
+            } else if (currentScore > 60){
+                grade = "C";
+                status = "Lulus";
+            } else if (currentScore > 50){
+                grade = "D";
+                status = "Tidak Lulus";
+            } else {
+                grade = "E";
+                status = "Tidak Lulus";
+            }
+
+            console.log(
+                `Mahasiswa ke-${i + 1} (Nilai: ${currentScore}) | Grade: ${grade} | Status: ${status}`
+            );
+        }
+
+        console.log ("--- Program Penilaian Selesai ---");
+    </script>
+    
+</body>
+</html>
